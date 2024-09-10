@@ -88,6 +88,7 @@ func main() {
 	r.POST("/translate", translation.TranslateV1Handler)
 
 	r.GET("/multimodelcall", mywebui.WSMultiModelCallHandler)
+	r.POST("/v1/summarize", apis.SummarizeHandler)
 
 	// 啥也不错，有些客户端真的很无语，不知道会怎么补全，尽量兼容吧
 	v1 := r.Group("/v1")
